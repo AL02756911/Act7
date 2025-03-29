@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('course_key')->unique();
             $table->string('titulo');
-            $table->string('caratula')->nullable(); // ruta o nombre de imagen
+            $table->string('caratula')->nullable();
             $table->text('contenido')->nullable();
-            $table->string('kit_robótica');
+            $table->string('kit_robotica');
             $table->unsignedBigInteger('grupo_id')->nullable();
             $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('set null');
             $table->timestamps();
